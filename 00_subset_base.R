@@ -20,8 +20,8 @@ base<-base %>% filter(NOM_LOC=="Total AGEB urbana")
 # Dicha variable se llama CVEGEO y tiene un cierto formato que se replicara.
 
 # crear la variable CVEGEO
-base$CVEGEO <- str_c("31",str_pad(base1$MUN, width = 3, side = "left", pad = "0"),
-           str_pad(base1$LOC, width = 4, side = "left", pad = "0"),
+base$CVEGEO <- str_c("31",str_pad(base$MUN, width = 3, side = "left", pad = "0"),
+           str_pad(base$LOC, width = 4, side = "left", pad = "0"),
            str_pad(base$AGEB, width = 4, side = "left", pad = "0"))
            
 # este ID tambien puede ser creada en Excel con
